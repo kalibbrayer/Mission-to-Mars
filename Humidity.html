@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lattitude</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots
+                                <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="MaxTemperature.html">Max Temperature</a></li>
+                            <li><a href="Humidity.html">Humidity</a></li>
+                            <li><a href="Cloudiness.html">Cloudiness</a></li>
+                            <li><a href="WindSpeed.html">Wind Speed</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Comparison.html">Comparison</a></li>
+                    <li><a href="Data.html">Data</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row"> 
+            <div class="col-sm-7">
+                <h1>Latitude vs. Humidity</h1>
+                <hr/>
+                <img class="img-responsive" style="width:100%" src="https://github.com/kalibbrayer/WeatherPy-Python-APIs/blob/master/HumidityInWorldCities.png?raw=true" alt="HumidityInWorldCities">
+                <br>
+                <p>The figure above plots the observed humidity (y-axis) against the latitude of each city (x-axis). As we can see, there's not a strong relationship between humidity and latitude. However, there is a notable cluster of data points between latitudes of -20 and -60 which have an average humidity above 60%. </p>
+            </div>
+            <div class="col-sm-5">
+                <h1>Visualizations</h1>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="MaxTemperature.html">
+                        <img class="img-responsive" src="https://github.com/kalibbrayer/WeatherPy-Python-APIs/blob/master/MaxTempInWorldCities.png?raw=true" alt="MaxTempInWorldCities">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="Cloudiness.html">
+                        <img class="img-responsive" src="https://github.com/kalibbrayer/WeatherPy-Python-APIs/blob/master/CloudinessInWorldCities.png?raw=true" alt="CloudinessInWorldCities">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="Humidity.html">
+                        <img class="img-responsive" src="https://github.com/kalibbrayer/WeatherPy-Python-APIs/blob/master/HumidityInWorldCities.png?raw=true" alt="HumidityInWorldCities">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="WindSpeed.html">
+                        <img class="img-responsive" src="https://github.com/kalibbrayer/WeatherPy-Python-APIs/blob/master/WindSpeedInWorldCities.png?raw=true" alt="WindSpeedInWorldCities">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
