@@ -51,13 +51,14 @@ def add():
 
 @app.route("/")
 def index(): 
-    return render_template("index.html")
+    mars_data = mongo.db.mars_data
+    return render_template("index.html", news_title = mars_data.find_one({},{"latest_news_title":1})["latest_news_title"], current_weather = mars_data.find_one({},{"mars_weather":1})["mars_weather"], image_link1= mars_data.find_one({},{"mars_images":1})["mars_images"]["Cerberus Hemisphere Enhanced"], image_link2= mars_data.find_one({},{"mars_images":1})["mars_images"]["Schiaparelli Hemisphere Enhanced"], image_link3= mars_data.find_one({},{"mars_images":1})["mars_images"]["Syrtis Major Hemisphere Enhanced"], image_link4= mars_data.find_one({},{"mars_images":1})["mars_images"]["Valles Marineris Hemisphere Enhanced"], feature_image= mars_data.find_one({},{"feature_image":1})["feature_image"], news_content = mars_data.find_one({},{"latest_news_content":1})["latest_news_content"], mars_facts = mars_data.find_one({},{"mars_facts":1})["mars_facts"])
 
 
 # In[ ]:
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="127.0.0.1", port=9999, debug=True)
 
 
 # In[ ]:
